@@ -1,0 +1,44 @@
+<?php
+
+define('TEST_HOST', 'http://octopus_core.site');
+
+Yii::setPathOfAlias('serviceTypeConfig', realpath(dirname(__FILE__) . '/../../../../data/'));
+
+return array(
+	'basePath' => dirname(__FILE__) . '/../../../../',
+
+	'import' => array(
+		'application.models.*',
+		'application.components.*',
+		'application.components.Controllers.*',
+		'application.components.Index.*',
+		'application.components.service.*'
+	),
+
+	'components' => array(
+		'db' => array(
+			'connectionString' => 'mysql:host=192.168.1.1;dbname=sod_dev',
+			'emulatePrepare' => true,
+			'username' => 'root',
+			'password' => '',
+			'charset' => 'utf8'
+		),
+		'fixture' => array(
+			'class' => 'system.test.CDbFixtureManager',
+		),
+		'cache'=>array(
+	        /*'class' => 'CMemCache',
+	        'servers' => array(
+	            array(
+	                'host' => '127.0.0.1',
+	                'port' => 11211,
+	                'weight' => 60
+	            )
+	        ),*/
+	    )
+	),
+
+	'params' => array(
+		
+	)
+);

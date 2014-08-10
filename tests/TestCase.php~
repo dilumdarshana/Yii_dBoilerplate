@@ -1,0 +1,13 @@
+<?php
+echo "helll";
+Yii::setPathOfAlias('Guzzle', realpath(__DIR__ . '/../vendor/guzzle/guzzle/src/Guzzle'));
+
+class TestCase extends CTestCase 
+{
+
+	public function setUp()
+	{
+        parent::setUp();
+	}
+
+}

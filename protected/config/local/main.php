@@ -1,0 +1,43 @@
+<?php
+/**
+ * Local server specific configurations
+ * 
+ * @created             28-July-2014
+ * @created by          Apache
+ * @type                core
+ * @version             1.0
+ * @last modified       28-July-2014
+ * @last modified by    Apache
+ */
+
+chdir (realpath(__DIR__ . '/../'));
+
+// local envirenment specific params
+$scope = require_once ('local'.DS.'params.php');
+ 
+return array(
+
+        'modules'=>array(
+            // uncomment the following to enable the Gii tool
+            
+            'gii'=>array(
+                'class'=>'system.gii.GiiModule',
+                'password'=>'gii',
+                // If removed, Gii defaults to localhost only. Edit carefully to taste.
+                'ipFilters'=>array('127.0.0.1', '::1', '192.168.1.51'),
+            ),
+            /**/
+        ),
+					
+		'components'=>array(	
+    		'db'=>array(
+    			'connectionString' => 'pgsql:host=192.168.1.51;dbname=octopus_core',
+    			'emulatePrepare' => true,
+                'username' => 'postgres',
+                'password' => 'iu',
+                'charset' => 'utf8'
+    		)
+        ),
+	
+	'params' => $scope
+);

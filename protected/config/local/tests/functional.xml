@@ -1,0 +1,12 @@
+<phpunit bootstrap="bootstrap.php"
+		convertErrorsToExceptions="true"
+		convertNoticesToExceptions="true"
+		convertWarningsToExceptions="true"
+		stopOnFailure="false">
+
+	<testsuites>
+		<testsuite name="Functional Tests">
+			<directory suffix=".php">../../../../tests/functional</directory>
+		</testsuite>
+	</testsuites> 
+</phpunit>

@@ -1,0 +1,11 @@
+<?php
+
+
+class testTest extends CTestClass {
+	
+	public function testHelloworld () {
+		
+		$val = true;
+		$this->assertTrue($val);
+	}
+}

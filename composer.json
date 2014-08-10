@@ -1,0 +1,11 @@
+{
+	"require": {
+		"php": ">=5.3.2",
+		"yiisoft/yii": "dev-master",
+		"phpunit/phpunit": "4.1.*",
+		"codeception/codeception": "dev-master",
+		"monolog/monolog": "dev-master",
+		"phpunit/phpunit-selenium": ">=1.2",
+		"guzzle/guzzle": "~3.7"
+	}
+}

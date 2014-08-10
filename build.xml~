@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Octopus" default="phpunit-dev-unit">
+  <target name="phpunit-dev-unit" description="Development">
+    <exec executable="./vendor/bin/phpunit" failonerror="true">
+      <arg value="-c" />
+      <arg path="protected/config/dev/tests/unit.xml" />
+    </exec>
+   </target>
+  <target name="phpunit-prod-unit" description="Production">
+    <exec executable="./vendor/bin/phpunit" failonerror="true">
+      <arg value="-c" />
+      <arg path="protected/config/prod/tests/unit.xml" />
+    </exec>
+   </target>
+  <target name="phpunit-local-unit" description="Local">
+    <exec executable="./vendor/bin/phpunit" failonerror="true">
+      <arg value="-c" />
+      <arg path="protected/config/local/tests/unit.xml" />
+    </exec>
+  </target>
+
+  <target name="phpunit-dev-functional" description="Development">
+    <exec executable="./vendor/bin/phpunit" failonerror="true">
+      <arg value="-c" />
+      <arg path="protected/config/dev/tests/functional.xml" />
+    </exec>
+   </target>
+  <target name="phpunit-prod-functional" description="Production">
+    <exec executable="./vendor/bin/phpunit" failonerror="true">
+      <arg value="-c" />
+      <arg path="protected/config/prod/tests/functional.xml" />
+    </exec>
+   </target>
+  <target name="phpunit-local-functional" description="Local">
+    <exec executable="./vendor/bin/phpunit" failonerror="true">
+      <arg value="-c" />
+      <arg path="protected/config/local/tests/functional.xml" />
+    </exec>
+   </target>
+</project>

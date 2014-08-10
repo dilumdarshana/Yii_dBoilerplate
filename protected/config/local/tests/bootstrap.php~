@@ -1,0 +1,15 @@
+<?php
+
+// change the following paths if necessary
+
+$yiit = dirname(__FILE__) . '/../../../../vendor/yiisoft/yii/framework/yiit.php';
+$config = dirname(__FILE__) . '/../../../../protected/config/local/tests/config.php';
+
+require_once($yiit);
+require_once(dirname(__FILE__) . '/../../../../tests/DbTestCase.php');
+require_once(dirname(__FILE__) . '/../../../../tests/TestCase.php');
+require_once(dirname(__FILE__) . '/../../../../tests/WebTestCase.php');
+
+Yii::setPathOfAlias('application.tests.fixtures', realpath(dirname(__FILE__) . '/../../../../tests/fixtures'));
+
+Yii::createWebApplication($config);
